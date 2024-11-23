@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="styles.css"> -->
+  <style>
+      /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background-color: #FF5722; /* Swiggy-like vibrant orange */
+  padding: 15px 20px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.icons a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.icons a:hover {
+  text-decoration: underline;
+  color: #FFEB3B; /* Yellow hover effect */
+}
+
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  width: 250px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  background-color: #FFEB3B; /* Yellow search button */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #FF9800; /* Hover effect for search button */
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  background-color: #fff;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2, h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.view-all {
+  display: inline-block;
+  margin-top: 10px;
+  color: #FF5722;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+/* Top Picks Section */
+.picks-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pick {
+  width: 30%;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.pick img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.pick .info {
+  padding: 15px;
+  text-align: center;
+}
+
+.pick .info p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.pick .info span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Nearby Restaurants Section */
+.restaurant {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.details h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.details p {
+  font-size: 14px;
+  color: #666;
+}
+
+.details p:first-child {
+  margin-top: 5px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #FF5722;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer big {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .picks-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pick {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .restaurant {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .restaurant img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+  </style>
+  <title>Swiggy UI</title>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <span class="logo">Taste it <br>Feel it!!!    </span>
+      <div class="icons">
+        <a href="#">Home</a>
+        <a href="#">Contacts</a>
+        <a href="#">Login/Sign Up</a>
+      </div>
+      <!-- Search Bar Added -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search for food, restaurants..." />
+        <button type="button">Search</button>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="intro">
+      <h2>Restaurants</h2>
+      <p>Enjoy your favourite treats</p>
+      <a href="#" class="view-all">View All →</a>
+    </section>
+
+    <section class="top-picks">
+      <h3>Top Picks For You</h3>
+      <div class="picks-container">
+        <div class="pick">
+          <img src="https://i.pinimg.com/736x/3d/e7/23/3de7239f3cf738d77800415589b29035.jpg" alt="Spicy Balls">
+          <div class="info">
+            <p>₹159 OFF <span>Above ₹499</span></p>
+            <p>Cheese Pizza</p>
+            <span>45-50 mins</span>
+          </div>
+        </div>
+        <div class="pick">
+          <img src="https://i.pinimg.com/736x/2a/e9/bd/2ae9bdbdbe9594d634997a3a73f606c3.jpg" alt="The Belgian Waffle Co.">
+          <div class="info">
+            <p>₹150 OFF <span>Above ₹449</span></p>
+            <p>Lucknawi Biryaani.</p>
+            <span>45-50 mins</span>
+          </div>
+        </div>
+        <div class="pick">
+          <img src="https://i.pinimg.com/enabled_lo_mid/736x/75/20/94/752094f7dc69faf9518377e9c7f8368d.jpg" alt="Sanju Ka Dhaba">
+          <div class="info">
+            <p>50% OFF <span>Up to ₹699</span></p>
+            <p>Dark Choco Shake</p>
+            <span>50-55 mins</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nearby-restaurants">
+      <h3>All Restaurants Nearby</h3>
+      <div class="restaurant">
+        <img src="https://i.pinimg.com/enabled_lo_mid/736x/a9/b8/a2/a9b8a266a4c061ca6ab6af63cf2e7caa.jpg" alt="Blue Chilli Restaurant">
+        <div class="details">
+          <h4>Strawberry Icecream </h4>
+          <p>4.2 ★ | 65-70 mins | ₹799</p>
+          <p>North Indian, South Indian, Indian, Fast Food</p>
+        </div>
+      </div>
+      <div class="restaurant">
+        <img src="https://i.pinimg.com/enabled_lo_mid/736x/e6/eb/24/e6eb241ed93c03a190da44743759f5f4.jpg" alt="The Belgian Waffle Co.">
+        <div class="details">
+          <h4>Milk Shake</h4>
+          <p>4.6 ★ | 45-50 mins | ₹399 for two</p>
+          <p>Waffle, Desserts, Ice Cream, Beverages</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <h2>Contacts</h2>
+    </div>
+    <div>
+      <big>
+        Gmail:
+      </big>
+      <p>
+        ravan0001@gmail.com
+      </p>
+      <big>
+        Contact:
+      </big>
+      <p>
+        9565561724
+      </p>
+
+    </div>
+  </footer>
+</body>
+</html>

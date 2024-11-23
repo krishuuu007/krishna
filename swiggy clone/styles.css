@@ -1,0 +1,239 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background-color: #FF5722; /* Swiggy-like vibrant orange */
+  padding: 15px 20px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.icons a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.icons a:hover {
+  text-decoration: underline;
+  color: #FFEB3B; /* Yellow hover effect */
+}
+
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  width: 250px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  background-color: #FFEB3B; /* Yellow search button */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #FF9800; /* Hover effect for search button */
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  background-color: #fff;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2, h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.view-all {
+  display: inline-block;
+  margin-top: 10px;
+  color: #FF5722;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+/* Top Picks Section */
+.picks-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pick {
+  width: 30%;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.pick img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.pick .info {
+  padding: 15px;
+  text-align: center;
+}
+
+.pick .info p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.pick .info span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Nearby Restaurants Section */
+.restaurant {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.details h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.details p {
+  font-size: 14px;
+  color: #666;
+}
+
+.details p:first-child {
+  margin-top: 5px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #FF5722;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer big {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .picks-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pick {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .restaurant {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .restaurant img {
+    width: 80px;
+    height: 80px;
+  }
+}
